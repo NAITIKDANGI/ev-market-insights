@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+<section class="kpis">
+<div><b>{{ '{:,}'.format(kpi.sales) }}</b><span>Total Annual Sales</span></div>
+<div><b>{{ kpi.manufacturers }}</b><span>Manufacturers</span></div>
+<div><b>{{ kpi.range|int }} km</b><span>Avg Range</span></div>
+<div><b>{{ kpi.rating }} ★</b><span>Avg Rating</span></div></section>
+<tableau-viz id="viz" src="{{ url }}" toolbar="bottom" hide-tabs></tableau-viz>
+{% endblock %}
